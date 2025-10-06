@@ -10,6 +10,44 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/carta.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .collapsible-parent {
+            margin: 5px 0;
+        }
+        
+        .collapsible-trigger {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .collapsible-trigger i {
+            transition: transform 0.3s ease;
+            margin-left: 10px;
+        }
+        
+        .collapsible-trigger.active i {
+            transform: rotate(180deg);
+        }
+        
+        .collapsible-content {
+            display: none;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .collapsible-content.show {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <!-- Navegación -->
@@ -120,6 +158,46 @@
                 <div class="service-category">
                     <h3><i class="fas fa-spa"></i> Tratamientos Capilares</h3>
                     <div class="service-items">
+                        <div class="service-item collapsible-parent">
+                            <div class="service-name collapsible-trigger">
+                                Rizos de ensueño - Curly Dream
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapsible-content">
+                                <div class="service-item">
+                                    <div class="service-name">- Tratamiento completo</div>
+                                    <div class="service-price">100€</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-name">- Mantenimiento</div>
+                                    <div class="service-price">80€</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item collapsible-parent">
+                            <div class="service-name collapsible-trigger">
+                                Alisado Brasileño
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="collapsible-content">
+                                <div class="service-item">
+                                    <div class="service-name">- Cabello Corto</div>
+                                    <div class="service-price">110€</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-name">- Cabello Medio</div>
+                                    <div class="service-price">150€</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-name">- Cabello Largo</div>
+                                    <div class="service-price">180€</div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-name">- Cabello Extralargo</div>
+                                    <div class="service-price">220€</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="service-item">
                             <div class="service-name">Hidratación Intensiva</div>
                             <div class="service-price">19€</div>
@@ -176,19 +254,23 @@
                     <div class="service-items">
                         <div class="service-item">
                             <div class="service-name">Manicura Semipermanente</div>
-                            <div class="service-price">15€</div>
+                            <div class="service-price">17€</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-name">Manicura spa + Semipermanente</div>
+                            <div class="service-price">21€</div>
                         </div>
                         <div class="service-item">
                             <div class="service-name">Pedicura Semipermanente</div>
-                            <div class="service-price">15€</div>
+                            <div class="service-price">17€</div>
                         </div>
                         <div class="service-item">
                             <div class="service-name">Pedicura spa</div>
-                            <div class="service-price">15€</div>
+                            <div class="service-price">20€</div>
                         </div>
                         <div class="service-item">
-                            <div class="service-name">Peducira spa + Semipermanente</div>
-                            <div class="service-price">20€</div>
+                            <div class="service-name">Pedicura spa + Semipermanente</div>
+                            <div class="service-price">25€</div>
                         </div>
                         <div class="service-item">
                             <div class="service-name">Masaje 30min</div>
@@ -252,7 +334,7 @@
                 <div class="promotion-card">
                     <div class="promotion-badge">PACK AHORRO</div>
                     <h3>Corte + Lavado + Peinado</h3>
-                    <p>Disfruta de nuestro pack completo por solo 45€ (antes 55€). Incluye corte a tu medida, lavado con productos profesionales y peinado.</p>
+                    <p>Disfruta de nuestro pack completo por solo 37€ (antes 49€). Incluye corte a tu medida, lavado con productos profesionales y peinado.</p>
                 </div>
                 <div class="promotion-card">
                     <div class="promotion-badge">SIN COSTE</div>
@@ -375,27 +457,65 @@
                         observer.unobserve(img);
                     }
                 });
-            }, {
-                rootMargin: '200px 0px',
-                threshold: 0.01
             });
             
+            // Observar todas las imágenes
             images.forEach(img => {
-                if (img.complete) {
-                    img.classList.add('loaded');
+                if (img.dataset.src) {
+                    imageObserver.observe(img);
                 } else {
-                    img.addEventListener('load', function() {
-                        this.classList.add('loaded');
-                    });
+                    img.classList.add('loaded');
+                }
+            });
+            
+            // Función para guardar el estado de un menú
+            function saveMenuState(menuId, isOpen) {
+                localStorage.setItem(`menu_${menuId}`, isOpen ? 'open' : 'closed');
+            }
+
+            // Función para cargar el estado de un menú
+            function loadMenuState(menuId) {
+                return localStorage.getItem(`menu_${menuId}`) === 'open';
+            }
+
+            // Inicializar menús desplegables
+            const triggers = document.querySelectorAll('.collapsible-trigger');
+            
+            triggers.forEach((trigger, index) => {
+                const content = trigger.nextElementSibling;
+                const menuId = trigger.textContent.trim().toLowerCase().replace(/\s+/g, '-') || `menu-${index}`;
+                
+                // Cargar estado guardado o usar el valor por defecto (abierto para los principales)
+                const isMainMenu = trigger.textContent.includes('Alisado Brasileño') || 
+                                 trigger.textContent.includes('Rizos de ensueño');
+                const shouldBeOpen = loadMenuState(menuId) !== null ? loadMenuState(menuId) : isMainMenu;
+                
+                // Aplicar estado inicial
+                if (shouldBeOpen) {
+                    trigger.classList.add('active');
+                    content.style.display = 'block';
+                    content.classList.add('show');
                 }
                 
-                if (img.hasAttribute('data-src')) {
-                    imageObserver.observe(img);
-                } else if (!img.classList.contains('loaded')) {
-                    img.classList.add('loaded');
-                }
+                // Configurar el evento de clic
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const isActive = this.classList.toggle('active');
+                    
+                    if (isActive) {
+                        content.style.display = 'block';
+                        content.classList.add('show');
+                    } else {
+                        content.style.display = 'none';
+                        content.classList.remove('show');
+                    }
+                    
+                    // Guardar el nuevo estado
+                    saveMenuState(menuId, isActive);
+                });
             });
         });
     </script>
-</body>
+    <script src="js/main.js"></script>
+{{ ... }}
 </html>
