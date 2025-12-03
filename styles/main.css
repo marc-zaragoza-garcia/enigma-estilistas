@@ -1,14 +1,15 @@
 /* Reset y estilos base */
 :root {
-    --primary-color: #52796F;
-    --primary-hover: #4CAF50;
-    --background-light: #FFFFFF;
-    --background-dark: #1A1A1A;
-    --text-light: #F5F5F5;
-    --text-dark: #1A1A1A;
-    --text-muted: #4D4D4D;
-    --white: #FFFFFF;
-    --transition: all 0.3s ease;
+    --primary-color: #333333; /* Negro para títulos y elementos principales */
+    --primary-hover: #5A5A5A; /* Gris oscuro para hover */
+    --accent-color: #CAD2C5; /* Verde como color de acento */
+    --background-light: #FFFFFF; /* Blanco para el fondo */
+    --background-dark: #2C2C2C; /* Gris oscuro */
+    --text-light: #F5F5F5; /* Blanco humo */
+    --text-dark: #333333; /* Negro para texto */
+    --text-muted: #6C757D; /* Gris medio para texto secundario */
+    --white: #FFFFFF; /* Blanco */
+    --transition: all 0.3s ease; /* Transición suave */
 }
 
 * {
@@ -96,38 +97,71 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary-color); /* Fondo negro para el botón principal */
+    color: var(--white); /* Texto blanco */
+    border: 2px solid var(--primary-color); /* Borde negro */
+    transition: var(--transition);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
-    color: var(--white);
-    -webkit-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
+    background-color: var(--white); /* Fondo blanco al hacer hover */
+    color: var(--primary-color); /* Texto negro al hacer hover */
+    border: 2px solid var(--primary-color); /* Mantiene el borde negro */
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
-    background-color: var(--white);
-    color: #52796F;
-    border: 2px solid var(--primary-color);
+    background-color: var(--white); /* Fondo blanco para el botón secundario */
+    color: var(--primary-color); /* Texto negro */
+    border: 2px solid var(--primary-color); /* Borde negro */
+    transition: var(--transition);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    -webkit-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
+    background-color: var(--primary-color); /* Fondo negro al hacer hover */
+    color: var(--white); /* Texto blanco al hacer hover */
+    border: 2px solid var(--primary-color); /* Mantiene el borde negro */
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.btn-accent {
+    background-color: var(--accent-color); /* Botón con color de acento */
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-accent:hover {
+    background-color: var(--primary-hover); /* Oscurecer el color de acento al pasar el cursor */
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accent-border {
+    border: 2px solid var(--accent-color); /* Bordes con color de acento */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.accent-text {
+    color: var(--accent-color); /* Texto con color de acento */
+    font-weight: 600;
+}
 
 /* Navegación */
 .navbar {
-    background-color: var(--primary-color);
+    background-color: var(--white); /* Fondo blanco para la barra de navegación */
     padding: 0.5rem 0; /* Reducir el padding vertical */
     position: fixed;
     width: 100%;
@@ -170,7 +204,7 @@ a:hover {
 }
 
 .nav-links a:not(.btn) {
-    color: var(--background-light);
+    color: var(--primary-color); /* Cambia el color del texto a negro */
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
@@ -197,7 +231,6 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-{{ ... }}
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -205,11 +238,16 @@ a:hover {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--background-light);
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -o-transition: var(--transition);
+    background-color: var(--primary-color); /* Cambia la línea a negro */
     transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color); /* Cambia el texto al color de acento al hacer hover */
+}
+
+.nav-links a:hover::after {
+    background-color: var(--accent-color); /* Cambia la línea al color de acento al hacer hover */
 }
 
 .nav-links a:hover::after,
@@ -311,19 +349,27 @@ a:hover {
 }
 
 .salon-image {
-    border-radius: 8px;
+    border-radius: 12px; /* Bordes redondeados */
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición fluida */
+    max-width: 90%; /* Ajusta el tamaño máximo de la imagen al 90% */
+    margin: 0 auto; /* Centra la imagen */
 }
 
 .salon-image img {
-    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    transition: transform 0.4s ease; /* Transición suave para el zoom */
 }
 
 .salon-image:hover img {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    transform: scale(1.08); /* Zoom sutil al pasar el cursor */
+}
+
+.salon-image:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el cursor */
 }
 
 .salon-text h2 {
