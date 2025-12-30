@@ -1,14 +1,15 @@
 /* Reset y estilos base */
 :root {
-    --primary-color: #333333; /* Negro para títulos y elementos principales */
-    --primary-hover: #5A5A5A; /* Gris oscuro para hover */
-    --accent-color: #CAD2C5; /* Verde como color de acento */
-    --background-light: #FFFFFF; /* Blanco para el fondo */
+    --primary-color: #6b7e60; /* Color para títulos principales */
+    --primary-hover: #5a6d52; /* Color hover para títulos */
+    --accent-color: #c19a6b; /* Color para botones */
+    --background-light: #f9f8f6; /* Fondo general */
     --background-dark: #2C2C2C; /* Gris oscuro */
     --text-light: #F5F5F5; /* Blanco humo */
-    --text-dark: #333333; /* Negro para texto */
+    --text-dark: #333333; /* Color para párrafos */
     --text-muted: #6C757D; /* Gris medio para texto secundario */
     --white: #FFFFFF; /* Blanco */
+    --icon-color: #94a684; /* Color para iconos */
     --transition: all 0.3s ease; /* Transición suave */
 }
 
@@ -24,6 +25,7 @@ body {
     color: var(--text-dark);
     background-color: var(--background-light);
     overflow-x: hidden;
+    background-color: #f9f8f6; /* Fondo general */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,7 +78,7 @@ a:hover {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color); /* Usar el color de acento para la línea debajo de los títulos */
 }
 
 .btn {
@@ -97,16 +99,16 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: var(--primary-color); /* Fondo negro para el botón principal */
+    background-color: var(--accent-color); /* Color de botones */
     color: var(--white); /* Texto blanco */
-    border: 2px solid var(--primary-color); /* Borde negro */
+    border: 2px solid var(--accent-color); /* Borde del mismo color */
     transition: var(--transition);
 }
 
 .btn-primary:hover {
-    background-color: var(--white); /* Fondo blanco al hacer hover */
-    color: var(--primary-color); /* Texto negro al hacer hover */
-    border: 2px solid var(--primary-color); /* Mantiene el borde negro */
+    background-color: #b38a5e; /* Color de botón más oscuro al hacer hover */
+    color: var(--white);
+    border: 2px solid #b38a5e;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -161,7 +163,7 @@ a:hover {
 
 /* Navegación */
 .navbar {
-    background-color: var(--white); /* Fondo blanco para la barra de navegación */
+    background-color: #f9f8f6; /* Color de fondo del nav */
     padding: 0.5rem 0; /* Reducir el padding vertical */
     position: fixed;
     width: 100%;
@@ -593,9 +595,9 @@ a:hover {
 }
 
 .contact-info i {
-    color: var(--primary-color);
+    color: var(--icon-color);
     width: 20px;
-    color: var(--white);
+    text-align: center;
 }
 
 .social-links {
@@ -606,18 +608,16 @@ a:hover {
 }
 
 .social-links a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--icon-color);
     color: var(--white);
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    margin: 0 0.5rem;
+    transition: var(--transition);
 }
 
 .social-links a i {
