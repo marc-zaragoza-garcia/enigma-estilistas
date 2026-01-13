@@ -652,42 +652,89 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     background-color: var(--primary-hover);
 }
-
 /* Footer */
 .footer {
     background-color: var(--background-dark);
     color: var(--background-light);
-    padding: 4rem 0 0;
+    padding: 3rem 0 0;
+    text-align: center;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
+/* Logo section */
+.footer-logo {
+    margin-bottom: 2.5rem;
+    width: 100%;
 }
 
 .footer-logo img {
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
+    display: block;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.footer-logo p {
-    color: var(--background-light);
-    opacity: 0.8;
-    line-height: 1.6;
+/* Main content with 3 columns */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr; /* Two 1px columns for the dividers */
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    text-align: left;
+    gap: 0; /* Remove gap to control spacing with padding */
 }
 
-.footer-links h4,
-.footer-contact h4 {
+/* Contact info (first column) */
+.footer-contact {
+    padding: 0 2rem;
+    text-align: left;
+}
+
+/* Social media (middle column) */
+.footer-social {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation links (third column) */
+.footer-links {
+    padding: 0 2rem;
+    text-align: right;
+}
+
+/* Vertical dividers */
+.footer-divider {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 1px;
+    height: 100%;
+    margin: 0;
+}
+
+/* Common styles for all sections */
+.footer-contact,
+.footer-links {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-social {
+    padding-bottom: 1rem;
+}
+
+.footer h4 {
     color: var(--background-light);
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.75rem;
+    text-align: inherit;
 }
 
-.footer-links h4::after,
-.footer-contact h4::after {
+.footer h4::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -697,8 +744,64 @@ header {
     background-color: var(--primary-color);
 }
 
+/* Center align the heading in the social column */
+.footer-social h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Right align the heading in the links column */
+.footer-links h4 {
+    text-align: right;
+}
+
+.footer-links h4::after {
+    left: auto;
+    right: 0;
+}
+
+/* Contact info styles */
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--background-light);
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.footer-contact i {
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+/* Social media icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.social-links a {
+    color: var(--background-light);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    opacity: 0.8;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* Navigation links */
 .footer-links ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-links li {
@@ -708,9 +811,6 @@ header {
 .footer-links a {
     color: var(--background-light);
     opacity: 0.8;
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -o-transition: var(--transition);
     transition: var(--transition);
     display: inline-block;
 }
@@ -718,26 +818,10 @@ header {
 .footer-links a:hover {
     opacity: 1;
     color: var(--primary-color);
-    -webkit-transform: translateX(5px);
-    -ms-transform: translateX(5px);
-    transform: translateX(5px);
+    transform: translateX(-3px);
 }
 
-.footer-contact p {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-    color: var(--background-light);
-    opacity: 0.8;
-}
-
-.footer-contact i {
-    color: var(--primary-color);
-    width: 20px;
-    text-align: center;
-}
-
+/* Footer bottom */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem 0;
@@ -745,9 +829,10 @@ header {
     color: var(--background-light);
     opacity: 0.7;
     font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
-/* Botón flotante de WhatsApp */
+/* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -884,6 +969,17 @@ header {
         text-align: center;
     }
     
+    .footer-contact,
+    .footer-social,
+    .footer-links {
+        text-align: center !important;
+        padding: 1rem 0;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
     .footer-links h4::after,
     .footer-contact h4::after {
         left: 50%;
@@ -892,8 +988,32 @@ header {
     transform: translateX(-50%);
     }
     
+    .footer-links h4 {
+        text-align: center !important;
+    }
+    
+    .footer-links h4::after {
+        left: 50% !important;
+        right: auto !important;
+        -webkit-transform: translateX(-50%) !important;
+    -ms-transform: translateX(-50%) !important;
+    transform: translateX(-50%) !important;
+    }
+    
     .social-links {
         justify-content: center;
+    }
+    
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 0.5rem;
+    }
+    
+    .footer-links li {
+        margin: 0.25rem 0;
     }
 }
 
