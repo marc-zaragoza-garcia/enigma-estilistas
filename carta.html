@@ -3,534 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta de Servicios - Enigma Estilistas</title>
+    <meta name="theme-color" content="#f7f6f0">
+    <title>Servicios y precios | Enigma Estilistas, Dénia</title>
+    <meta name="description" content="Consulta la carta de peluquería, color, tratamientos capilares y estética de Enigma Estilistas en Dénia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/carta.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .collapsible-parent {
-            margin: 5px 0;
-        }
-        
-        .collapsible-trigger {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 500;
-        }
-        
-        .collapsible-trigger i {
-            transition: transform 0.3s ease;
-            margin-left: 10px;
-        }
-        
-        .collapsible-trigger.active i {
-            transform: rotate(180deg);
-        }
-        
-        .collapsible-content {
-            display: none;
-            margin-left: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .collapsible-content.show {
-            display: block;
-            animation: fadeIn 0.3s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="styles/rebrand.css">
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas" width="175" class="img-fluid">
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Navegación principal">
+            <a class="brand-mark" href="index.html" aria-label="Enigma Estilistas, inicio">
+                <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas">
             </a>
-            <button class="menu-toggle" aria-label="Menú">
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="index.html#servicios">Servicios</a></li>
-                <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-                <li><a href="https://wa.me/34626301495?text=Hola,%20me%20gustaría%20pedir%20una%20cita" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Pedir Cita</a></li>
-                <li><a href="carta.html" class="btn btn-secondary">Ver Carta</a></li>
+                <li><a href="index.html#salon">El salón</a></li>
+                <li><a href="index.html#visitanos">Visítanos</a></li>
+                <li><a href="carta.html" aria-current="page">Precios</a></li>
+                <li><a class="nav-book" href="https://wa.me/34626301495?text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener noreferrer">Pide tu cita <span aria-hidden="true">↗</span></a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Banner Principal -->
-    <header class="page-header">
-        <img src="imagenes/banner4.jpg" alt="Nuestros Servicios" class="header-image img-fluid">
-        <div class="header-overlay">
-            <div class="container">
-                <h1>Nuestros Servicios</h1>
-                <p>Descubre todo lo que podemos hacer por ti</p>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Descripción del Centro -->
-    <section class="section description">
-        <div class="container">
-            <div class="description-content">
-                <h2>Bienvenidos a Enigma Estilistas</h2>
-                <p>Enigma Estilistas es un salón pensado para ti: cercano, profesional y con mucha chispa. Cuidamos tu cabello, tu piel y tu bienestar para que salgas siempre feliz, segura y espectacular.</p>
-                <p>Nuestro equipo de profesionales está altamente cualificado y en constante formación para ofrecerte los mejores tratamientos y las últimas tendencias en peluquería y estética.</p>
+    <main>
+        <header class="price-hero">
+            <img class="price-hero__image" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2200&q=88" alt="Interior de peluquería con puestos de trabajo y sillones" fetchpriority="high">
+            <div class="price-hero__content">
+                <p class="eyebrow">Carta de servicios / Dénia</p>
+                <h1>Tu cuidado,<br>a tu medida.</h1>
+                <p>Consulta nuestros servicios y precios. Para reservar o resolver una duda, estamos a un mensaje.</p>
+            </div>
+        </header>
+
+        <section class="section-wrap price-intro" aria-labelledby="price-intro-title">
+            <div class="price-intro__row">
+                <h2 id="price-intro-title">Una carta clara.<br>Un resultado personal.</h2>
+                <p>El precio de algunos servicios técnicos puede variar según el largo y la cantidad de cabello. Escríbenos y te orientamos antes de tu visita.</p>
+            </div>
+        </section>
+
+        <nav class="price-index" aria-label="Categorías de servicios">
+            <a href="#corte">Corte</a>
+            <a href="#color">Color</a>
+            <a href="#tratamientos">Tratamientos</a>
+            <a href="#peinados">Peinados</a>
+            <a href="#estetica">Estética</a>
+            <a href="#depilacion">Depilación</a>
+        </nav>
+
+        <section class="section-wrap price-list" aria-label="Servicios y precios">
+            <article class="price-group" id="corte">
+                <div class="price-group__head">
+                    <h2>Corte de pelo</h2>
+                    <span class="price-group__number">01</span>
+                </div>
+                <ul class="price-group__rows">
+                    <li class="price-row"><span class="price-row__name">Corte de caballero</span><span class="price-row__value">19 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Corte de señora</span><span class="price-row__value">19 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Corte infantil (hasta 10 años)</span><span class="price-row__value">14 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Corte de bebé, máquina o parcial</span><span class="price-row__value">12 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Corte de flequillo</span><span class="price-row__value">7 €</span></li>
+                </ul>
+            </article>
+
+            <article class="price-group" id="color">
+                <div class="price-group__head">
+                    <h2>Coloración</h2>
+                    <span class="price-group__number">02</span>
+                </div>
+                <ul class="price-group__rows">
+                    <li class="price-row"><span class="price-row__name">Tinte completo</span><span class="price-row__value">31 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Brillo baño de cristal</span><span class="price-row__value">21 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Mechas / reflejos (zona superior)</span><span class="price-row__value">25 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Mechas / reflejos (media cabeza)</span><span class="price-row__value">31 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Mechas / reflejos (completas o moda)</span><span class="price-row__value">61 €</span></li>
+                </ul>
+            </article>
+
+            <article class="price-group price-group--feature" id="tratamientos">
+                <div class="price-group__head">
+                    <h2>Tratamientos capilares</h2>
+                    <span class="price-group__number">03</span>
+                </div>
+                <ul class="price-group__rows">
+                    <li class="price-row"><span class="price-row__name">Rizos de ensueño · Curly Dream completo</span><span class="price-row__value">100 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Curly Dream · mantenimiento</span><span class="price-row__value">80 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Alisado brasileño · cabello corto</span><span class="price-row__value">110 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Alisado brasileño · cabello medio</span><span class="price-row__value">150 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Alisado brasileño · cabello largo</span><span class="price-row__value">180 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Alisado brasileño · cabello extralargo</span><span class="price-row__value">220 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Hidratación intensiva</span><span class="price-row__value">19 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Ácido hialurónico</span><span class="price-row__value">29 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Tratamiento de queratina Keraliss</span><span class="price-row__value">61 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Suplemento mascarilla nutritiva</span><span class="price-row__value">2 €</span></li>
+                </ul>
+            </article>
+
+            <article class="price-group" id="peinados">
+                <div class="price-group__head">
+                    <h2>Secado &amp; peinados</h2>
+                    <span class="price-group__number">04</span>
+                </div>
+                <ul class="price-group__rows">
+                    <li class="price-row"><span class="price-row__name">Peinado con ondas</span><span class="price-row__value">30 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Plancha / brushing</span><span class="price-row__value">30 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Semi-recogido</span><span class="price-row__value">38 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Recogido de novia</span><span class="price-row__value">53 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Peinado de fiesta</span><span class="price-row__value">53 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Suplemento secado al aire</span><span class="price-row__value">3 €</span></li>
+                </ul>
+            </article>
+
+            <article class="price-group" id="estetica">
+                <div class="price-group__head">
+                    <h2>Estética</h2>
+                    <span class="price-group__number">05</span>
+                </div>
+                <ul class="price-group__rows">
+                    <li class="price-row"><span class="price-row__name">Manicura semipermanente</span><span class="price-row__value">17 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Manicura spa + semipermanente</span><span class="price-row__value">21 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Pedicura semipermanente</span><span class="price-row__value">17 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Pedicura spa</span><span class="price-row__value">20 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Pedicura spa + semipermanente</span><span class="price-row__value">25 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Masaje (30 min)</span><span class="price-row__value">20 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Maquillaje</span><span class="price-row__value">20 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Tratamiento facial</span><span class="price-row__value">20 €</span></li>
+                </ul>
+            </article>
+
+            <article class="price-group" id="depilacion">
+                <div class="price-group__head">
+                    <h2>Depilación</h2>
+                    <span class="price-group__number">06</span>
+                </div>
+                <ul class="price-group__rows">
+                    <li class="price-row"><span class="price-row__name">Cejas</span><span class="price-row__value">6 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Labio</span><span class="price-row__value">6 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Axilas</span><span class="price-row__value">15 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Ingles</span><span class="price-row__value">15 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Medias piernas</span><span class="price-row__value">15 €</span></li>
+                    <li class="price-row"><span class="price-row__name">Piernas completas</span><span class="price-row__value">30 €</span></li>
+                </ul>
+            </article>
+            <p class="price-note">Precios en euros. Los servicios técnicos pueden variar según el largo y la cantidad de cabello; consúltanos antes de reservar.</p>
+        </section>
+
+        <section class="booking-band" aria-labelledby="booking-title">
+            <h2 id="booking-title">¿No sabes qué servicio elegir?</h2>
+            <a class="button" href="https://wa.me/34626301495?text=Hola,%20me%20gustar%C3%ADa%20consultar%20un%20servicio" target="_blank" rel="noopener noreferrer">Pregúntanos por WhatsApp <span class="button__arrow" aria-hidden="true">↗</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="brand-mark" href="index.html" aria-label="Enigma Estilistas, inicio">
+                    <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas">
+                </a>
+                <p>Tu espacio de peluquería, color y cuidado personal en Dénia.</p>
+            </div>
+            <div class="footer-col">
+                <h2>Contacto</h2>
+                <a href="tel:+34626301495">+34 626 30 14 95</a>
+                <a href="mailto:enigma@gmail.com">enigma@gmail.com</a>
+                <a href="https://maps.google.com/?q=Calle+Cartagena+3,+D%C3%A9nia" target="_blank" rel="noopener noreferrer">Calle Cartagena, 3 · Dénia</a>
+            </div>
+            <div class="footer-col">
+                <h2>Encuéntranos</h2>
+                <a href="https://www.instagram.com/enigmadenia" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://www.facebook.com/p/Enigma-Estilistas-100063683794591/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+                <a href="index.html">Inicio →</a>
             </div>
         </div>
-    </section>
-
-    <!-- Servicios -->
-    <section class="section services">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            
-            <div class="services-categories">
-                <!-- Cortes de Pelo -->
-                <div class="service-category">
-                    <h3><i class="fas fa-cut"></i> Cortes de Pelo</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-name">Corte de Caballero</div>
-                            <div class="service-price">19€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Corte de Señora</div>
-                            <div class="service-price">19€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Corte Infantil (hasta 10 años)</div>
-                            <div class="service-price">14€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Corte de Bebé, Máquina o Parcial</div>
-                            <div class="service-price">12€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Corte de Flequillo</div>
-                            <div class="service-price">7€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Coloración -->
-                <div class="service-category">
-                    <h3><i class="fas fa-palette"></i> Coloración</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-name">Tinte Completo</div>
-                            <div class="service-price">31€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Brillo Baño de Cristal</div>
-                            <div class="service-price">21€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Mechas/Reflejos (Zona superior)</div>
-                            <div class="service-price">25€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Mechas/Reflejos (Media cabeza)</div>
-                            <div class="service-price">31€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Mechas/Reflejos (Completas o moda)</div>
-                            <div class="service-price">61€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tratamientos Capilares -->
-                <div class="service-category">
-                    <h3><i class="fas fa-spa"></i> Tratamientos Capilares</h3>
-                    <div class="service-items">
-                        <div class="service-item collapsible-parent">
-                            <div class="service-name collapsible-trigger">
-                                Rizos de ensueño - Curly Dream
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="collapsible-content">
-                                <div class="service-item">
-                                    <div class="service-name">- Tratamiento completo</div>
-                                    <div class="service-price">100€</div>
-                                </div>
-                                <div class="service-item">
-                                    <div class="service-name">- Mantenimiento</div>
-                                    <div class="service-price">80€</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-item collapsible-parent">
-                            <div class="service-name collapsible-trigger">
-                                Alisado Brasileño
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <div class="collapsible-content">
-                                <div class="service-item">
-                                    <div class="service-name">- Cabello Corto</div>
-                                    <div class="service-price">110€</div>
-                                </div>
-                                <div class="service-item">
-                                    <div class="service-name">- Cabello Medio</div>
-                                    <div class="service-price">150€</div>
-                                </div>
-                                <div class="service-item">
-                                    <div class="service-name">- Cabello Largo</div>
-                                    <div class="service-price">180€</div>
-                                </div>
-                                <div class="service-item">
-                                    <div class="service-name">- Cabello Extralargo</div>
-                                    <div class="service-price">220€</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Hidratación Intensiva</div>
-                            <div class="service-price">19€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Ácido Hialurónico</div>
-                            <div class="service-price">29€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Tratamiento de Queratina Keraliss</div>
-                            <div class="service-price">61€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Suplemento Mascarilla Nutritiva</div>
-                            <div class="service-price">2€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Peinados -->
-                <div class="service-category">
-                    <h3><i class="fas fa-wind"></i> Secado + Peinados</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-name">Peinado con Ondas</div>
-                            <div class="service-price">30€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Peinado con Plancha/Brushing</div>
-                            <div class="service-price">30€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Semi-recogido</div>
-                            <div class="service-price">38€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Recogido (Recogido de Novia)</div>
-                            <div class="service-price">53€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Recogido (Peinado de Fiesta)</div>
-                            <div class="service-price">53€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Suplemento Secado al aire</div>
-                            <div class="service-price">3€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Manicura y Pedicura -->
-                <div class="service-category">
-                    <h3><i class="fas fa-hand-sparkles"></i> Estética</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-name">Manicura Semipermanente</div>
-                            <div class="service-price">17€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Manicura spa + Semipermanente</div>
-                            <div class="service-price">21€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Pedicura Semipermanente</div>
-                            <div class="service-price">17€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Pedicura spa</div>
-                            <div class="service-price">20€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Pedicura spa + Semipermanente</div>
-                            <div class="service-price">25€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Masaje 30min</div>
-                            <div class="service-price">20€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Maquillaje</div>
-                            <div class="service-price">20€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Tratamiento facial</div>
-                            <div class="service-price">20€</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Depilación -->
-                <div class="service-category">
-                    <h3><i class="fas fa-feather-alt"></i> Depilación</h3>
-                    <div class="service-items">
-                        <div class="service-item">
-                            <div class="service-name">Cejas</div>
-                            <div class="service-price">6€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Labio</div>
-                            <div class="service-price">6€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Axilas</div>
-                            <div class="service-price">15€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Ingles</div>
-                            <div class="service-price">15€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Medias Piernas</div>
-                            <div class="service-price">15€</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-name">Piernas Completas</div>
-                            <div class="service-price">30€</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promociones -->
-    <section class="section promotions">
-        <div class="container">
-            <h2 class="section-title">Promociones Especiales</h2>
-            <div class="promotions-grid">
-                <div class="promotion-card">
-                    <div class="promotion-badge">20% OFF</div>
-                    <h3>Día del Estudiante</h3>
-                    <p>Los jueves, presentando tu carné de estudiante, disfruta de un 20% de descuento en todos nuestros servicios.</p>
-                </div>
-                <div class="promotion-card">
-                    <div class="promotion-badge">PACK AHORRO</div>
-                    <h3>Corte + Lavado + Peinado</h3>
-                    <p>Disfruta de nuestro pack completo por solo 37€ (antes 49€). Incluye corte a tu medida, lavado con productos profesionales y peinado.</p>
-                </div>
-                <div class="promotion-card">
-                    <div class="promotion-badge">SIN COSTE</div>
-                    <h3>1ª Visita</h3>
-                    <p>En tu primera visita, te regalamos un diagnóstico capilar gratuito y un tratamiento de hidratación sin coste adicional.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Opiniones -->
-    <section class="section testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Increíble experiencia. Chesca es una profesional increíble que sabe exactamente lo que necesitas. ¡Volveré seguro!"</p>
-                    <p class="testimonial-author">- María G.</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"El mejor salón al que he ido. El trato es excepcional y los resultados siempre superan mis expectativas."</p>
-                    <p class="testimonial-author">- Carlos M.</p>
-                </div>
-                <div class="testimonial-qr">
-                    <img src="imagenes/opiniones/Logo.jpg" alt="Escanea para dejar tu opinión" class="qr-code img-fluid">
-                    <p>¡Escanea y deja tu opinión!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta">
-        <div class="container">
-            <h2>¿Lista para tu próxima cita de belleza?</h2>
-            <p>Reserva ahora y descubre la diferencia de un servicio profesional y personalizado.</p>
-            <a href="https://wa.me/34626301495?text=Hola,%20me%20gustaría%20reservar%20una%20cita%20en%20Enigma%20Estilistas" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Reservar Cita</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <!-- Logo centrado en la parte superior -->
-            <div class="footer-logo">
-                <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas" width="150">
-            </div>
-
-            <!-- Contenido de 3 columnas -->
-            <div class="footer-content">
-                <!-- Columna 1: Información de contacto -->
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +34 626 30 14 95</p>
-                    <p><i class="fas fa-envelope"></i> enigma@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Calle Cartagena, 3, Dénia</p>
-                </div>
-
-                <!-- Divider -->
-                <div class="footer-divider"></div>
-
-                <!-- Columna 2: Redes Sociales -->
-                <div class="footer-social">
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/enigmadenia" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/enigmaestilistas" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://wa.me/34626301495?text=Hola,%20me%20gustaría%20pedir%20una%20cita" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="footer-divider"></div>
-
-                <!-- Columna 3: Enlaces de navegación -->
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#servicios">Servicios</a></li>
-                        <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
-                        <li><a href="index.html#contacto">Contacto</a></li>
-                        <li><a href="carta.html">Carta de Servicios</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="footer-bottom">
-                <p>&copy; 2023 Enigma Estilistas. Todos los derechos reservados.</p>
-            </div>
+        <div class="footer-bottom">
+            <span>© 2026 Enigma Estilistas</span>
+            <span>Dénia · Alicante</span>
         </div>
     </footer>
 
     <script>
-        // Menú móvil
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.classList.toggle('active');
+        const menuButton = document.querySelector('.menu-toggle');
+        const primaryNav = document.querySelector('#primary-nav');
+
+        function closeMenu() {
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Abrir menú');
+            primaryNav.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        }
+
+        menuButton.addEventListener('click', () => {
+            const isOpen = menuButton.getAttribute('aria-expanded') !== 'true';
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+            primaryNav.classList.toggle('is-open', isOpen);
+            document.body.classList.toggle('menu-open', isOpen);
         });
 
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.querySelector('.menu-toggle').classList.remove('active');
-            });
-        });
-
-        // Efecto de carga suave para las imágenes
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.removeAttribute('data-src');
-                        }
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            
-            // Observar todas las imágenes
-            images.forEach(img => {
-                if (img.dataset.src) {
-                    imageObserver.observe(img);
-                } else {
-                    img.classList.add('loaded');
-                }
-            });
-            
-            // Función para guardar el estado de un menú
-            function saveMenuState(menuId, isOpen) {
-                localStorage.setItem(`menu_${menuId}`, isOpen ? 'open' : 'closed');
-            }
-
-            // Función para cargar el estado de un menú
-            function loadMenuState(menuId) {
-                return localStorage.getItem(`menu_${menuId}`) === 'open';
-            }
-
-            // Inicializar menús desplegables
-            const triggers = document.querySelectorAll('.collapsible-trigger');
-            
-            triggers.forEach((trigger, index) => {
-                const content = trigger.nextElementSibling;
-                const menuId = trigger.textContent.trim().toLowerCase().replace(/\s+/g, '-') || `menu-${index}`;
-                
-                // Cargar estado guardado o usar el valor por defecto (abierto para los principales)
-                const isMainMenu = trigger.textContent.includes('Alisado Brasileño') || 
-                                 trigger.textContent.includes('Rizos de ensueño');
-                const shouldBeOpen = loadMenuState(menuId) !== null ? loadMenuState(menuId) : isMainMenu;
-                
-                // Aplicar estado inicial
-                if (shouldBeOpen) {
-                    trigger.classList.add('active');
-                    content.style.display = 'block';
-                    content.classList.add('show');
-                }
-                
-                // Configurar el evento de clic
-                trigger.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const isActive = this.classList.toggle('active');
-                    
-                    if (isActive) {
-                        content.style.display = 'block';
-                        content.classList.add('show');
-                    } else {
-                        content.style.display = 'none';
-                        content.classList.remove('show');
-                    }
-                    
-                    // Guardar el nuevo estado
-                    saveMenuState(menuId, isActive);
-                });
-            });
+        primaryNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMenu();
         });
     </script>
-    <script src="js/main.js"></script>
+</body>
 </html>

@@ -3,226 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enigma Estilistas - Tu Peluquería de Confianza</title>
+    <meta name="theme-color" content="#f7f6f0">
+    <title>Enigma Estilistas | Peluquería en Dénia</title>
+    <meta name="description" content="Peluquería, color y estética en Dénia. En Enigma Estilistas cada servicio empieza escuchándote.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="styles/rebrand.css">
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas" width="175" class="img-fluid">
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Navegación principal">
+            <a class="brand-mark" href="index.html" aria-label="Enigma Estilistas, inicio">
+                <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas">
             </a>
-            <button class="menu-toggle" aria-label="Menú">
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
                 <span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="index.html#servicios">Servicios</a></li>
-                <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-                <li><a href="https://wa.me/34626301495?text=Hola,%20me%20gustaría%20pedir%20una%20cita" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Pedir Cita</a></li>
-                <li><a href="carta.html" class="btn btn-secondary">Ver Carta</a></li>
+            <ul class="nav-links" id="primary-nav">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#salon">El salón</a></li>
+                <li><a href="#visitanos">Visítanos</a></li>
+                <li><a href="carta.html">Precios</a></li>
+                <li><a class="nav-book" href="https://wa.me/34626301495?text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener noreferrer">Pide tu cita <span aria-hidden="true">↗</span></a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Banner Principal -->
-    <header id="inicio" class="hero">
-        <div class="slogan">
-            <h1>Enigma, simplemente espectacular.</h1>
-        </div>
-        <img src="imagenes/banner4.jpg" alt="Bienvenidos a Enigma Estilistas" class="hero-image img-fluid">
+        </nav>
     </header>
 
-    <!-- Sección del Salón -->
-    <section class="section salon">
-        <div class="container">
-            <div class="salon-content">
-                <div class="salon-image">
-                    <img src="imagenes/salon.jpg" alt="Nuestro Salón" class="img-fluid">
-                </div>
-                <div class="salon-text">
-                    <h2>Nuestro Salón</h2>
-                    <p>Enigma Estilistas no es solo un salón, es un lugar donde cada clienta se convierte en amiga y cada servicio en una experiencia de cuidado personal. Nos encanta escucharte, asesorarte y lograr que disfrutes de un ratito solo para ti, mientras nosotros nos encargamos de que salgas con una sonrisa y sintiéndote espectacular.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" class="section services">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="services-grid">
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/relax.jpg" alt="Relax" class="img-fluid">
-                    <h3>Tratamientos de Relax</h3>
-                    <p>Disfruta de nuestros tratamientos relajantes para renovar tu energía.</p>
-                </a>
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/promociones.jpg" alt="Promociones" class="img-fluid">
-                    <h3>Promociones Especiales</h3>
-                    <p>Descubre nuestras ofertas especiales para cuidar de ti.</p>
-                </a>
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/peluqueria.jpg" alt="Peluquería" class="img-fluid">
-                    <h3>Peluquería</h3>
-                    <p>Los mejores cortes y peinados para resaltar tu belleza.</p>
-                </a>
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/estetica.jpg" alt="Estética" class="img-fluid">
-                    <h3>Estética</h3>
-                    <p>Servicios de belleza profesional para tu cuidado personal.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Sobre Nosotros -->
-    <section id="sobre-nosotros" class="section about">
-        <div class="container">
-            <h2 class="section-title">Sobre Nosotros</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Nuestra Historia</h3>
-                    <p>Enigma Estilistas es un salón pensado para ti: cercano, profesional y con mucha chispa. Cuidamos tu cabello, tu piel y tu bienestar para que salgas siempre feliz, segura y espectacular.</p>
-                    
-                    <h3>Nuestra Estilista</h3>
-                    <p>Chesca García es una peluquera y estilista con gran experiencia y formación. Ha realizado diversos cursos de perfeccionamiento en corte, color y tratamientos capilares. Siempre actualizada en tendencias, ofrece asesoramiento personalizado y resultados de calidad. Su dedicación y profesionalidad la convierten en una referencia en el sector. Con Chesca, tu imagen está en buenas manos.</p>
-                </div>
-                <div class="about-image">
-                    <img src="imagenes/nuestra_estilista.jpg" alt="Nuestra Estilista" class="img-fluid">
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero__image" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2200&q=88" alt="Interior luminoso de una peluquería con sillones frente al espejo" fetchpriority="high">
+            <div class="hero__content">
+                <p class="eyebrow">Peluquería · Color · Estética / Dénia</p>
+                <h1 id="hero-title">Enigma<br><em>Estilistas</em></h1>
+                <p class="hero__copy">Un espacio para cambiar de aire, cuidar de ti y encontrar un estilo que se sienta tuyo.</p>
+                <div class="action-row">
+                    <a class="button button--lime" href="https://wa.me/34626301495?text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener noreferrer">Reservar cita <span class="button__arrow" aria-hidden="true">↗</span></a>
+                    <a class="button button--outline" href="carta.html">Ver servicios y precios <span class="button__arrow" aria-hidden="true">→</span></a>
                 </div>
             </div>
-        </div>
-    </section>
+            <span class="hero__note">Calle Cartagena, 3 · Dénia</span>
+        </section>
 
-    <!-- Información Adicional (usar cards como "Nuestros Servicios") -->
-    <section class="section services info-cards">
-        <div class="container">
-            <div class="services-grid">
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/ubicacion.png" alt="Ubicación" class="img-fluid">
-                    <h3>Ubicación</h3>
-                    <p>Ven a visitarnos en nuestro acogedor salón en el corazón de la ciudad.</p>
-                </a>
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/quienes_somos.png" alt="Quiénes Somos" class="img-fluid">
-                    <h3>Nuestro Compromiso</h3>
-                    <p>Ofrecerte la mejor experiencia de belleza con profesionalidad y cariño.</p>
-                </a>
-                <a href="carta.html" class="service-card">
-                    <img src="imagenes/chesca.jpg" alt="Chesca" class="img-fluid">
-                    <h3>Experiencia Garantizada</h3>
-                    <p>Más de 10 años de experiencia en el sector de la belleza.</p>
-                </a>
+        <div class="signal-bar" aria-label="Especialidades del salón">
+            <div class="signal-bar__inner">
+                <span class="signal-bar__place">Dénia, Alicante</span>
+                <span>Corte con intención</span>
+                <span>Color a tu medida</span>
+                <span>Tiempo para ti</span>
             </div>
         </div>
-    </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Horario de Atención</h3>
-                    <p>Martes a Viernes: 9:30 - 18:00h</p>
-                    <p>Sábados: 9:30 - 13:30h</p>
-                    <p>Domingos y Lunes: Cerrado</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/enigmadenia" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/p/Enigma-Estilistas-100063683794591/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://wa.me/626301495" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <section class="section-wrap intro" aria-labelledby="intro-title">
+            <p class="section-label">Una visita, a tu manera</p>
+            <div>
+                <h2 id="intro-title">No vienes solo a cambiarte el pelo. Vienes a <em>sentirte bien.</em></h2>
+                <p>En Enigma empezamos por escucharte. Te asesoramos con honestidad, trabajamos con cuidado y nos tomamos el tiempo para que el resultado encaje contigo, no con una fórmula.</p>
+            </div>
+        </section>
+
+        <section class="service-section" id="servicios" aria-labelledby="services-title">
+            <div class="section-wrap">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Lo que hacemos</p>
+                        <h2 id="services-title">Tu próximo<br>capítulo empieza aquí.</h2>
+                    </div>
+                    <p>Desde un buen corte hasta ese color que llevas tiempo imaginando. Te ayudamos a encontrar el servicio que mejor te va.</p>
+                </div>
+                <div class="service-showcase">
+                    <article class="service-tile">
+                        <a href="carta.html#corte" aria-label="Ver cortes y peinados">
+                            <div class="service-tile__image">
+                                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Cabello largo con ondas suaves y brillo natural" loading="lazy">
+                                <span class="service-tile__index">01</span>
+                            </div>
+                            <div class="service-tile__body">
+                                <div>
+                                    <h3>Corte &amp; forma</h3>
+                                    <p>Un corte pensado para moverse contigo.</p>
+                                </div>
+                                <span class="service-tile__link" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="service-tile">
+                        <a href="carta.html#color" aria-label="Ver servicios de coloración">
+                            <div class="service-tile__image">
+                                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Puestos de trabajo de un salón de peluquería" loading="lazy">
+                                <span class="service-tile__index">02</span>
+                            </div>
+                            <div class="service-tile__body">
+                                <div>
+                                    <h3>Color con carácter</h3>
+                                    <p>Matices y luz, siempre a tu medida.</p>
+                                </div>
+                                <span class="service-tile__link" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="service-tile">
+                        <a href="carta.html#tratamientos" aria-label="Ver tratamientos y estética">
+                            <div class="service-tile__image">
+                                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=85" alt="Sillones de peluquería preparados para una nueva visita" loading="lazy">
+                                <span class="service-tile__index">03</span>
+                            </div>
+                            <div class="service-tile__body">
+                                <div>
+                                    <h3>Rituales &amp; cuidado</h3>
+                                    <p>Tratamientos para volver a tu centro.</p>
+                                </div>
+                                <span class="service-tile__link" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="action-row" style="margin-top: 40px">
+                    <a class="button button--dark" href="carta.html">Explorar toda la carta <span class="button__arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature" aria-labelledby="feature-title">
+            <div class="feature__image">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88" alt="Detalle de una melena cuidada con ondas naturales" loading="lazy">
+            </div>
+            <div class="feature__content">
+                <p class="section-label">El cuidado se nota</p>
+                <h2 id="feature-title">Un buen resultado empieza mucho antes de las <em>tijeras.</em></h2>
+                <p>Chesca García combina experiencia, formación continua y una mirada atenta a cada persona. Hablamos de lo que buscas, de lo que funciona para tu cabello y de cómo mantenerlo después.</p>
+                <a class="button button--outline" href="https://wa.me/34626301495?text=Hola,%20me%20gustar%C3%ADa%20recibir%20asesoramiento" target="_blank" rel="noopener noreferrer">Cuéntanos qué buscas <span class="button__arrow" aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="section-wrap about" id="salon" aria-labelledby="about-title">
+            <div class="about__grid">
+                <div class="about__portrait">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1100&q=85" alt="Interior de un salón preparado para atender a sus clientas" loading="lazy">
+                </div>
+                <div class="about__copy">
+                    <p class="section-label">Cercanía, oficio y buen ojo</p>
+                    <h2 id="about-title">Un salón pequeño. Un cuidado <em>enorme.</em></h2>
+                    <p>Enigma Estilistas es un lugar cercano, profesional y con mucha chispa. Nos gusta escucharte, asesorarte y convertir tu visita en un ratito solo para ti.</p>
+                    <p>Chesca está en formación constante en corte, color y tratamientos capilares para que cada recomendación tenga sentido para ti y para tu cabello.</p>
+                    <span class="about__signature">Chesca García</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit" id="visitanos" aria-labelledby="visit-title">
+            <div class="section-wrap visit__inner">
+                <div>
+                    <p class="section-label">Nos vemos en Dénia</p>
+                    <h2 id="visit-title">Haz un hueco para ti.</h2>
+                    <p class="visit__copy">Estamos en la calle Cartagena. Escríbenos para reservar o para preguntarnos qué servicio encaja mejor con lo que necesitas.</p>
+                    <a class="button button--dark" href="https://wa.me/34626301495?text=Hola,%20me%20gustar%C3%ADa%20pedir%20una%20cita" target="_blank" rel="noopener noreferrer">Pide tu cita <span class="button__arrow" aria-hidden="true">↗</span></a>
+                </div>
+                <div class="visit__details">
+                    <div class="visit__item">
+                        <h3>Dirección</h3>
+                        <a href="https://maps.google.com/?q=Calle+Cartagena+3,+D%C3%A9nia" target="_blank" rel="noopener noreferrer">Calle Cartagena, 3<br>Dénia, Alicante ↗</a>
+                    </div>
+                    <div class="visit__item">
+                        <h3>Horario</h3>
+                        <p>Martes–viernes<br>9:30–18:00</p>
+                    </div>
+                    <div class="visit__item">
+                        <h3>Sábado</h3>
+                        <p>9:30–13:30</p>
+                    </div>
+                    <div class="visit__item">
+                        <h3>Domingo y lunes</h3>
+                        <p>Cerrado</p>
                     </div>
                 </div>
-                <div class="map-container">
-                    <img src="imagenes/ubicacion.png" alt="Ubicación del Salón" class="map-image">
-                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="brand-mark" href="index.html" aria-label="Enigma Estilistas, inicio">
+                    <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas">
+                </a>
+                <p>Tu espacio de peluquería, color y cuidado personal en Dénia.</p>
+            </div>
+            <div class="footer-col">
+                <h2>Contacto</h2>
+                <a href="tel:+34626301495">+34 626 30 14 95</a>
+                <a href="mailto:enigma@gmail.com">enigma@gmail.com</a>
+                <a href="https://maps.google.com/?q=Calle+Cartagena+3,+D%C3%A9nia" target="_blank" rel="noopener noreferrer">Calle Cartagena, 3 · Dénia</a>
+            </div>
+            <div class="footer-col">
+                <h2>Encuéntranos</h2>
+                <a href="https://www.instagram.com/enigmadenia" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://www.facebook.com/p/Enigma-Estilistas-100063683794591/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+                <a href="carta.html">Servicios y precios →</a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <!-- Logo centrado en la parte superior -->
-            <div class="footer-logo">
-                <img src="imagenes/logo_enigma_sinfondo.png" alt="Enigma Estilistas" width="150">
-            </div>
-
-            <!-- Contenido de 3 columnas -->
-            <div class="footer-content">
-                <!-- Columna 1: Información de contacto -->
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +34 626 30 14 95</p>
-                    <p><i class="fas fa-envelope"></i> enigma@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Calle Cartagena, 3, Dénia</p>
-                </div>
-
-                <!-- Divider -->
-                <div class="footer-divider"></div>
-
-                <!-- Columna 2: Redes Sociales -->
-                <div class="footer-social">
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/enigmadenia" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/enigmaestilistas" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://wa.me/34626301495?text=Hola,%20me%20gustaría%20pedir%20una%20cita" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="footer-divider"></div>
-
-                <!-- Columna 3: Enlaces de navegación -->
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#servicios">Servicios</a></li>
-                        <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
-                        <li><a href="index.html#contacto">Contacto</a></li>
-                        <li><a href="carta.html">Carta de Servicios</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="footer-bottom">
-                <p>&copy; 2023 Enigma Estilistas. Todos los derechos reservados.</p>
-            </div>
+        <div class="footer-bottom">
+            <span>© 2026 Enigma Estilistas</span>
+            <span>Dénia · Alicante</span>
         </div>
     </footer>
 
     <script>
-        // Menú móvil
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.classList.toggle('active');
+        const menuButton = document.querySelector('.menu-toggle');
+        const primaryNav = document.querySelector('#primary-nav');
+
+        function closeMenu() {
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Abrir menú');
+            primaryNav.classList.remove('is-open');
+            document.body.classList.remove('menu-open');
+        }
+
+        menuButton.addEventListener('click', () => {
+            const isOpen = menuButton.getAttribute('aria-expanded') !== 'true';
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            menuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+            primaryNav.classList.toggle('is-open', isOpen);
+            document.body.classList.toggle('menu-open', isOpen);
         });
 
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.querySelector('.menu-toggle').classList.remove('active');
-            });
+        primaryNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMenu();
         });
     </script>
-    
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/34626301495?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chatea con nosotros por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 </body>
 </html>
